@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import './Card.css';
+import CardDetails from '../CardDetails/CardDetails';
 
 function Card({
   info,
@@ -27,26 +28,11 @@ function Card({
           src="./src/assets/images/click.png"
           alt="inscription click"
         ></img>
-        <p className="card__text">
-          <span className="card__desc">Вселенная: </span>
-          {universe}
-        </p>
-        <p className="card__text">
-          <span className="card__desc">Альтер Эго: </span>
-          {alterego}
-        </p>
-        <p className="card__text">
-          <span className="card__desc">Род деятельсности: </span>
-          {occupation}
-        </p>
-        <p className="card__text">
-          <span className="card__desc">Друзья: </span>
-          {friends}
-        </p>
-        <p className="card__text">
-          <span className="card__desc">Суперсилы: </span>
-          {superpowers}
-        </p>
+        <CardDetails detail="Вселенная" value={universe} />
+        <CardDetails detail="Альтер Эго" value={alterego} />
+        <CardDetails detail="Род деятельсности" value={occupation} />
+        <CardDetails detail="Друзья" value={friends} />
+        <CardDetails detail="Суперсилы" value={superpowers} />
         <div className="card__box-img">
           <img className="card__img" src={url} alt={name} />
         </div>
